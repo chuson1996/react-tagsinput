@@ -552,7 +552,7 @@
 
         return _react2.default.createElement(
           'div',
-          { ref: 'div', onClick: this.handleClick.bind(this), className: className },
+          { ref: 'div', className: className },
           renderLayout(tagComponents, inputComponent)
         );
       }
