@@ -386,7 +386,7 @@ class TagsInput extends React.Component {
     })
 
     return (
-      <div ref='div' className={className}>
+      <div ref='div' className={className} {...other}>
         {renderLayout(tagComponents, inputComponent)}
       </div>
     )

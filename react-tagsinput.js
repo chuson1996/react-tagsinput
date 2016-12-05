@@ -140,14 +140,13 @@
   }
 
   function defaultRenderTag(props) {
-    var tag = props.tag;
-    var key = props.key;
-    var disabled = props.disabled;
-    var onRemove = props.onRemove;
-    var classNameRemove = props.classNameRemove;
-    var getTagDisplayValue = props.getTagDisplayValue;
-
-    var other = _objectWithoutProperties(props, ['tag', 'key', 'disabled', 'onRemove', 'classNameRemove', 'getTagDisplayValue']);
+    var tag = props.tag,
+        key = props.key,
+        disabled = props.disabled,
+        onRemove = props.onRemove,
+        classNameRemove = props.classNameRemove,
+        getTagDisplayValue = props.getTagDisplayValue,
+        other = _objectWithoutProperties(props, ['tag', 'key', 'disabled', 'onRemove', 'classNameRemove', 'getTagDisplayValue']);
 
     return _react2.default.createElement(
       'span',
@@ -168,11 +167,10 @@
   };
 
   function defaultRenderInput(props) {
-    var onChange = props.onChange;
-    var value = props.value;
-    var addTag = props.addTag;
-
-    var other = _objectWithoutProperties(props, ['onChange', 'value', 'addTag']);
+    var onChange = props.onChange,
+        value = props.value,
+        addTag = props.addTag,
+        other = _objectWithoutProperties(props, ['onChange', 'value', 'addTag']);
 
     return _react2.default.createElement('input', _extends({ type: 'text', onChange: onChange, value: value }, other));
   }
@@ -209,7 +207,7 @@
     function TagsInput() {
       _classCallCheck(this, TagsInput);
 
-      var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TagsInput).call(this));
+      var _this = _possibleConstructorReturn(this, (TagsInput.__proto__ || Object.getPrototypeOf(TagsInput)).call(this));
 
       _this.state = { tag: '', isFocused: false };
       _this.focus = _this.focus.bind(_this);
@@ -260,12 +258,12 @@
       value: function _addTags(tags) {
         var _this2 = this;
 
-        var _props = this.props;
-        var validationRegex = _props.validationRegex;
-        var onChange = _props.onChange;
-        var onlyUnique = _props.onlyUnique;
-        var maxTags = _props.maxTags;
-        var value = _props.value;
+        var _props = this.props,
+            validationRegex = _props.validationRegex,
+            onChange = _props.onChange,
+            onlyUnique = _props.onlyUnique,
+            maxTags = _props.maxTags,
+            value = _props.value;
 
 
         if (onlyUnique) {
@@ -354,9 +352,9 @@
       value: function handlePaste(e) {
         var _this3 = this;
 
-        var _props2 = this.props;
-        var addOnPaste = _props2.addOnPaste;
-        var pasteSplit = _props2.pasteSplit;
+        var _props2 = this.props,
+            addOnPaste = _props2.addOnPaste,
+            pasteSplit = _props2.pasteSplit;
 
 
         if (!addOnPaste) {
@@ -379,10 +377,10 @@
           return;
         }
 
-        var _props3 = this.props;
-        var value = _props3.value;
-        var removeKeys = _props3.removeKeys;
-        var addKeys = _props3.addKeys;
+        var _props3 = this.props,
+            value = _props3.value,
+            removeKeys = _props3.removeKeys,
+            addKeys = _props3.addKeys;
         var tag = this.state.tag;
 
         var empty = tag === '';
@@ -464,12 +462,11 @@
     }, {
       key: 'inputProps',
       value: function inputProps() {
-        var _props$inputProps = this.props.inputProps;
-        var onChange = _props$inputProps.onChange;
-        var onFocus = _props$inputProps.onFocus;
-        var onBlur = _props$inputProps.onBlur;
-
-        var otherInputProps = _objectWithoutProperties(_props$inputProps, ['onChange', 'onFocus', 'onBlur']);
+        var _props$inputProps = this.props.inputProps,
+            onChange = _props$inputProps.onChange,
+            onFocus = _props$inputProps.onFocus,
+            onBlur = _props$inputProps.onBlur,
+            otherInputProps = _objectWithoutProperties(_props$inputProps, ['onChange', 'onFocus', 'onBlur']);
 
         var props = _extends({}, defaultInputProps, otherInputProps);
 
@@ -502,32 +499,31 @@
       value: function render() {
         var _this4 = this;
 
-        var _props4 = this.props;
-        var value = _props4.value;
-        var onChange = _props4.onChange;
-        var tagProps = _props4.tagProps;
-        var renderLayout = _props4.renderLayout;
-        var renderTag = _props4.renderTag;
-        var renderInput = _props4.renderInput;
-        var addKeys = _props4.addKeys;
-        var removeKeys = _props4.removeKeys;
-        var className = _props4.className;
-        var focusedClassName = _props4.focusedClassName;
-        var addOnBlur = _props4.addOnBlur;
-        var addOnPaste = _props4.addOnPaste;
-        var inputProps = _props4.inputProps;
-        var pasteSplit = _props4.pasteSplit;
-        var onlyUnique = _props4.onlyUnique;
-        var maxTags = _props4.maxTags;
-        var validationRegex = _props4.validationRegex;
-        var disabled = _props4.disabled;
-        var tagDisplayProp = _props4.tagDisplayProp;
+        var _props4 = this.props,
+            value = _props4.value,
+            onChange = _props4.onChange,
+            tagProps = _props4.tagProps,
+            renderLayout = _props4.renderLayout,
+            renderTag = _props4.renderTag,
+            renderInput = _props4.renderInput,
+            addKeys = _props4.addKeys,
+            removeKeys = _props4.removeKeys,
+            className = _props4.className,
+            focusedClassName = _props4.focusedClassName,
+            addOnBlur = _props4.addOnBlur,
+            addOnPaste = _props4.addOnPaste,
+            inputProps = _props4.inputProps,
+            pasteSplit = _props4.pasteSplit,
+            onlyUnique = _props4.onlyUnique,
+            maxTags = _props4.maxTags,
+            validationRegex = _props4.validationRegex,
+            disabled = _props4.disabled,
+            tagDisplayProp = _props4.tagDisplayProp,
+            other = _objectWithoutProperties(_props4, ['value', 'onChange', 'tagProps', 'renderLayout', 'renderTag', 'renderInput', 'addKeys', 'removeKeys', 'className', 'focusedClassName', 'addOnBlur', 'addOnPaste', 'inputProps', 'pasteSplit', 'onlyUnique', 'maxTags', 'validationRegex', 'disabled', 'tagDisplayProp']);
 
-        var other = _objectWithoutProperties(_props4, ['value', 'onChange', 'tagProps', 'renderLayout', 'renderTag', 'renderInput', 'addKeys', 'removeKeys', 'className', 'focusedClassName', 'addOnBlur', 'addOnPaste', 'inputProps', 'pasteSplit', 'onlyUnique', 'maxTags', 'validationRegex', 'disabled', 'tagDisplayProp']);
-
-        var _state = this.state;
-        var tag = _state.tag;
-        var isFocused = _state.isFocused;
+        var _state = this.state,
+            tag = _state.tag,
+            isFocused = _state.isFocused;
 
 
         if (isFocused) {
@@ -552,7 +548,7 @@
 
         return _react2.default.createElement(
           'div',
-          { ref: 'div', className: className },
+          _extends({ ref: 'div', className: className }, other),
           renderLayout(tagComponents, inputComponent)
         );
       }
